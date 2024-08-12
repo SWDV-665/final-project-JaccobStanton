@@ -7,10 +7,13 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect("YOUR_MONGODB_CONNECTION_STRING", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  "where_I_would_put_connection_string_if_port_not_blocked_for_me",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 
 const grocerySchema = new mongoose.Schema({
   name: String,
